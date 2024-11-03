@@ -23,7 +23,7 @@ app.use((req, res, next) => {
 function authenticateProxyKeyAndModel(req, res, next) {
   const providedKey = req.headers['auro']; // Assuming the key is sent in the 'x-proxy-key' header
   const requestedModel = req.body.model;
-undi95/toppy-m-7b
+
   // List of allowed models
   const allowedModels = ['gryphe/mythomist-7b', 'gryphe/mythomax-l2-13b', 'undi95/toppy-m-7b'];
 

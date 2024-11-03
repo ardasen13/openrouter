@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const targetUrl = 'https://openrouter.ai';
 const openaiKey = process.env.OPENAI_KEY;
 const proxyKey = process.env.PROXY_KEY; // Your secret proxy key
-const port = 7860;
+const port = process.env.PORT || 7860;
 const baseUrl = getExternalUrl(process.env.SPACE_ID);
 
 app.use(bodyParser.json({ limit: '50mb' }));

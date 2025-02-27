@@ -49,6 +49,12 @@ app.use('/api', authenticateProxyKeyAndModel, (req, res, next) => {
       return message;
     });
     
+    // Add provider preferences to the request body
+    req.body.provider = {
+      order: ['DeepInfra', 'Lepton', 'Fireworks', 'Together'],
+      allow_fallbacks: false
+    };
+    
     // Log the processed messages to verify the changes
     console.log('Processed messages:', JSON.stringify(req.body.messages, null, 2));
   }
